@@ -1,0 +1,35 @@
+### **Accessing Jenkins Using the DNS Name**  
+Follow these steps to access **Jenkins using a DNS name**.
+
+### **Step 1: Create the Target Group**  
+Create a **target group** and add the instance running Jenkins, using **port 8080**.  
+Set the **health check path** to `/login`.  
+
+- **Target Group Name:** `jenkins-tg`  
+
+---
+
+### **Step 2: Create the Internal ALB (Application Load Balancer)**  
+Create an **internal** Application Load Balancer (ALB) and add listeners for **both HTTP (80) and HTTPS (443)**.  
+
+- **Load Balancer Name:** `jenkins-alb`  
+
+---
+
+### **Step 3: Create the A Record in Route 53**  
+Create an **A record** in **Route 53** to point to the **Jenkins internal load balancer**.  
+
+- **Record Name:** `jenkins.telugudevopsguru.in`  
+
+---
+
+### **Step 4: Access Jenkins**  
+Now, you can access **Jenkins** using the following URL:  
+
+```
+https://jenkins.telugudevopsguru.in
+```
+
+---
+
+🎉 **Congratulations! You have successfully set up Jenkins with a DNS name.** 🚀
