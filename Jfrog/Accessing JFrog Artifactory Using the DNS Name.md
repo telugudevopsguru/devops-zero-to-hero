@@ -21,3 +21,6 @@ Create an A record in Route 53 to point to the JFrog Artifactory internal load b
 You can access Artifactory using the following URL:  
 
 - **URL:** https://artifactory.telugudevopsguru.in
+
+
+🎉 **Congratulations! You have successfully set up Jfrog with a DNS name.** 🚀
